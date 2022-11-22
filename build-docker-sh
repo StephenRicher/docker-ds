@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+read -s -p "Choose password for Jupyter Notebook: " password
+
+docker build -t jupyter-datascience \
+  --build-arg USER_ID=$(id -u) \
+  --build-arg GROUP_ID=$(id -g) \
+  --build-arg PASSWORD="${password}" .
+
+ln -s ${PWD}/docker-ds.sh /usr/local/bin/docker-ds
