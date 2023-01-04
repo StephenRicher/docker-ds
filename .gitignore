@@ -5,3 +5,5 @@
 !build-docker-sh
 !docker-ds.sh
 !Dockerfile
+!docker-ds-it.sh
+!requirements.txt
